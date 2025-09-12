@@ -1,10 +1,12 @@
 import React from 'react'
 import ProjectComponent from './ProjectComponent'
 import connectLiveImg from "../app/Images/connectLive-img.png"
+import { Typography } from '@mui/material'
+import GradientHeading from './GradiantHeading'
 
 const Projects = () => {
     return (
-        <div className='grid md:grid-cols-3  items-center md:ml-20 md:mr-20'>
+        <div className='grid md:grid-cols-3  items-center md:ml-20 md:mr-20 mb-20'>
             <ProjectComponent
                 projectName="ConnectLive"
                 title="A video conferencing platform"

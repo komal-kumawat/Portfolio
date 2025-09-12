@@ -27,28 +27,28 @@ const Header = () => {
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-10 text-lg mx-auto justify-between">
           <Link
-            href="/#about"
+            href="#about"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             About
           </Link>
           <Link
-            href="/#experience"
+            href="#experience"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Experience
           </Link>
           <Link
-            href="/#projects"
+            href="#projects"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Projects
           </Link>
           <Link
-            href="/#Education"
+            href="#Education"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
@@ -90,28 +90,28 @@ const Header = () => {
           bg-white border-gray-300 text-black dark:bg-black dark:border-gray-700 dark:text-white ml-2 mr-2"
         >
           <Link
-            href="/#about"
+            href="#about"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             About
           </Link>
           <Link
-            href="/#experience"
+            href="#experience"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Experience
           </Link>
           <Link
-            href="/#projects"
+            href="#projects"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Projects
           </Link>
           <Link
-            href="/#Education"
+            href="#Education"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >

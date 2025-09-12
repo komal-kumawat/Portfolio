@@ -11,14 +11,21 @@ import ProjectComponent from "@/components/ProjectComponent";
 import Projects from "@/components/Projects";
 import DropDownComponent from "@/components/DropDownComponent";
 import Education from "@/components/Education";
+import GradientHeading from "@/components/GradiantHeading";
+import Experience from "@/components/Experience";
 export default function Home() {
   const { dark } = useTheme();
   return (
-    <div className={` ${dark ? "bg-black text-white border-gray-700" : "bg-white text-black border-gray-300"}`}>
+    <div className={`flex flex-col text-center  ${dark ? "bg-black text-white border-gray-700" : "bg-white text-black border-gray-300"}`}>
       <Header />
       <Dashboard />
+      <GradientHeading text="Projects" />
+
       <Projects />
-      <Education/>
+      <GradientHeading text="Experience"/>
+      <Experience/>
+      <GradientHeading text="Education" />
+      <Education />
       <Footer />
 
     </div>

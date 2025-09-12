@@ -23,7 +23,7 @@ const DropDownComponent = ({ title, startDate, endDate, icon, location, name, de
     >
       <div>
         {/* Title */}
-        <h1 className="text-xl font-semibold px-6 pt-4">{title}</h1>
+        <h1 className="text-xl font-semibold px-6 pt-4 text-left">{title}</h1>
 
         {/* Clickable row */}
         <div
@@ -57,7 +57,7 @@ const DropDownComponent = ({ title, startDate, endDate, icon, location, name, de
         {/* Dropdown content */}
         {open && (
           <div
-            className={`px-6 py-4 text-sm transition-all duration-300 ease-in-out
+            className={`px-6 py-4 text-sm transition-all duration-300 ease-in-out text-left
               ${dark ? "border-t border-gray-700 text-gray-300" : "border-t border-gray-200 text-gray-700"} bg-transparent`}
           >
             {details}
