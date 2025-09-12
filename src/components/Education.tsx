@@ -12,10 +12,7 @@ const Education = () => {
                 <li>I am a passionate computer science student </li>
             </ul>
             } />
-            <DropDownComponent title="NIMS UNIVERSITY" name="BTECH" startDate="2022" endDate="2026" location="Jaipur" icon={<FaGraduationCap />} details={<ul className="list-disc pl-5 space-y-2">
-                <li>I am a passionate computer science student </li>
-            </ul>
-            } />
+
         </div>
     )
 }
