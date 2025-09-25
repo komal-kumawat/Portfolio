@@ -3,7 +3,7 @@ import React, { ReactNode, useState } from 'react';
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 interface IDropDownComponent {
-  title: string;
+  title?: string;
   startDate?: string;
   endDate?: string;
   icon?: ReactNode;
@@ -23,8 +23,9 @@ const DropDownComponent = ({ title, startDate, endDate, icon, location, name, de
     >
       <div>
         {/* Title */}
-        <h1 className="text-xl font-semibold px-6 pt-4 text-left">{title}</h1>
-
+        {
+          title && <h1 className="text-xl font-semibold px-6 pt-4 text-left">{title}</h1>
+        }
         {/* Clickable row */}
         <div
           onClick={() => setOpen(!open)}
@@ -36,12 +37,13 @@ const DropDownComponent = ({ title, startDate, endDate, icon, location, name, de
               {icon}
               <span className="font-medium">{name}</span>
             </div>
-
-            <div className="text-sm mt-1 opacity-80">
-              {startDate} - {endDate} | {location}
-            </div>
+            {startDate &&
+              (<div className="text-sm mt-1 opacity-80">
+                {startDate} - {endDate} | {location}
+              </div>
+              )
+            }
           </div>
-
           {/* Chevron icon */}
           <div
             className={`p-2 rounded-full transition-all duration-200 shadow-sm 

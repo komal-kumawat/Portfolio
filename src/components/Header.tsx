@@ -6,7 +6,6 @@ import { HiMenu, HiMoon, HiSun, HiX } from "react-icons/hi";
 import { useTheme } from "../app/context/ThemeContext";
 import Button from "./Button";
 import Icons from "./Icons";
-import { FiMoon, FiSun } from "react-icons/fi";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -22,44 +21,57 @@ const Header = () => {
          border-gray-300 dark:border-gray-700 md:border-none "
       >
         {/* Logo */}
-        <div className="text-2xl font-bold text-gray-700 dark:text-gray-300"><a href="/">KOMAL</a></div>
+        <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">
+          <a href="/">KOMAL</a>
+        </div>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-10 text-lg mx-auto justify-between">
-          <Link
+          <a
             href="#about"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             About
-          </Link>
-          <Link
-            href="#experience"
-            className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
-            onClick={() => setOpen(false)}
-          >
-            Experience
-          </Link>
-          <Link
+          </a>
+          <a
             href="#projects"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Projects
-          </Link>
+          </a>
+          <a
+            href="#experience"
+            className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
+            onClick={() => setOpen(false)}
+          >
+            Experience
+          </a>
+          {/* Keep Link for navigation to a different page */}
           <Link
-            href="#Education"
+            href="#skills"
+            className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
+            onClick={() => setOpen(false)}
+          >
+            Skills
+          </Link>
+          <a
+            href="#education"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Education
-          </Link>
+          </a>
         </nav>
 
         <div className="flex items-center justify-between gap-5">
           {/* Dark/Light Toggle */}
-          <button className="md:block text-xl flex items-center" onClick={toggleDark}>
-            {dark?<Icons icon={<HiMoon/>}/>:<Icons icon={<HiSun/>}/> }
+          <button
+            className="md:block text-xl flex items-center"
+            onClick={toggleDark}
+          >
+            {dark ? <Icons icon={<HiMoon />} /> : <Icons icon={<HiSun />} />}
           </button>
 
           {/* Mobile Menu Button */}
@@ -69,17 +81,17 @@ const Header = () => {
           >
             {open ? <HiX /> : <HiMenu />}
           </button>
+
           <div className="hidden md:block ml-5">
             <Button
               text="Connect"
-              href="#About"
+              href="#about"
               bgColor={dark ? "white" : "black"}
               color={dark ? "black" : "white"}
               hColor={dark ? "white" : "black"}
               hbgColor={dark ? "black" : "white"}
             />
           </div>
-
         </div>
       </div>
 
@@ -89,45 +101,50 @@ const Header = () => {
           className="md:hidden flex flex-col items-center py-4 space-y-4 border-b shadow-md
           bg-white border-gray-300 text-black dark:bg-black dark:border-gray-700 dark:text-white ml-2 mr-2"
         >
-          <Link
+          <a
             href="#about"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             About
-          </Link>
-          <Link
-            href="#experience"
-            className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
-            onClick={() => setOpen(false)}
-          >
-            Experience
-          </Link>
-          <Link
+          </a>
+
+          <a
             href="#projects"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Projects
-          </Link>
-          <Link
-            href="#Education"
+          </a>
+          <a
+            href="#experience"
+            className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
+            onClick={() => setOpen(false)}
+          >
+            Experience
+          </a>
+          <a
+            href="#skills"
+            className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
+            onClick={() => setOpen(false)}
+          >
+            Skills
+          </a>
+          <a
+            href="#education"
             className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 no-underline"
             onClick={() => setOpen(false)}
           >
             Education
-          </Link>
+          </a>
           <Button
             text="Connect"
-            href="#About"
+            href="#about"
             bgColor={dark ? "white" : "black"}
             color={dark ? "black" : "white"}
             hColor={dark ? "white" : "black"}
             hbgColor={dark ? "black" : "white"}
           />
-
-
-
         </div>
       )}
     </header>

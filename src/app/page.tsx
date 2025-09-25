@@ -13,21 +13,51 @@ import DropDownComponent from "@/components/DropDownComponent";
 import Education from "@/components/Education";
 import GradientHeading from "@/components/GradiantHeading";
 import Experience from "@/components/Experience";
+import Skills from "@/components/Skills";
+import About from "@/components/About";
+
 export default function Home() {
   const { dark } = useTheme();
   return (
-    <div className={`flex flex-col text-center  ${dark ? "bg-black text-white border-gray-700" : "bg-white text-black border-gray-300"}`}>
+    <div
+      className={`flex flex-col text-center ${dark
+          ? "bg-black text-white border-gray-700"
+          : "bg-white text-black border-gray-300"
+        }`}
+    >
       <Header />
       <Dashboard />
-      <GradientHeading text="Projects" />
 
-      <Projects />
-      <GradientHeading text="Experience"/>
-      <Experience/>
-      <GradientHeading text="Education" />
-      <Education />
+      {/* About Section */}
+      <section id="about">
+        <GradientHeading text="About me" />
+        <About />
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects">
+        <GradientHeading text="Projects" />
+        <Projects />
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience">
+        <GradientHeading text="Experience" />
+        <Experience />
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills">
+        <GradientHeading text="Skills" />
+        <Skills />
+      </section>
+      {/* Education Section */}
+      <section id="education">
+        <GradientHeading text="Education" />
+        <Education />
+      </section>
+
       <Footer />
-
     </div>
   );
 }
